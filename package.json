@@ -1,5 +1,5 @@
 {
-  "name": "fullstackopen-part3",
+  "name": "phonebook-backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,25 +7,26 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:ui": "rm -rf build && cd ../phonebook/ && npm run build && cp -r build ../backend",
+    "build:ui": "rm -rf build && cd ../phonebook-frontend/ && npm run build && cp -r build ../phonebook-backend",
     "deploy": "fly deploy",
-    "deploy:full": "npm run build:ui && npm run deploy",    
+    "deploy:full": "npm run build:ui && npm run deploy",
     "logs:prod": "fly logs"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FelipeGirardi/fullstackopen-part3.git"
+    "url": "git+https://github.com/FelipeGirardi/phonebook-backend.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/FelipeGirardi/fullstackopen-part3/issues"
+    "url": "https://github.com/FelipeGirardi/phonebook-backend/issues"
   },
-  "homepage": "https://github.com/FelipeGirardi/fullstackopen-part3#readme",
+  "homepage": "https://github.com/FelipeGirardi/phonebook-backend#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
