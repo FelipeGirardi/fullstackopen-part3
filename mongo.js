@@ -23,22 +23,22 @@ const personSchema = new mongoose.Schema({
 const Person = mongoose.model('Person', personSchema)
 
 if (process.argv.length<4) {
-    Person.find({}).then(result => {
-        console.log('Phonebook:')
-        result.forEach(person => {
-          console.log(`${person.name} ${person.number}`)
-        })
-        mongoose.connection.close()
-      })
+  Person.find({}).then(result => {
+    console.log('Phonebook:')
+    result.forEach(person => {
+      console.log(`${person.name} ${person.number}`)
+    })
+    mongoose.connection.close()
+  })
 } else {
-    const person = new Person({
-        name: name,
-        number: number,
-      })
-      
-      person.save().then(result => {
-        console.log(`Added ${result.name} number ${result.number} to phonebook`)
-        mongoose.connection.close()
-      })
+  const person = new Person({
+    name: name,
+    number: number,
+  })
+
+  person.save().then(result => {
+    console.log(`Added ${result.name} number ${result.number} to phonebook`)
+    mongoose.connection.close()
+  })
 }
 
